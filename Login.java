@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Login{
     public static void main() {
         TelaPrincipal telaPrincipal = new TelaPrincipal();
-        LimparTela limparTela = new LimparTela();
+        LimparTela LimparTela = new LimparTela();
 
         final String USUARIO = "login";
         final String SENHA = "senha";

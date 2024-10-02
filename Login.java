@@ -9,7 +9,7 @@ public class Login{
         final String SENHA = "senha";
         Scanner scanner = new Scanner(System.in);
 
-            System.out.print("Login: ");
+            System.out.print("Login:");
             String login = scanner.nextLine();
 
             System.out.print("Senha: ");

@@ -17,7 +17,7 @@ public class Login{
 
             if (login.equals(USUARIO) && senha.equals(SENHA)) {
                 System.out.println("Login bem-sucedido!");
-                limparTela.TelaLimpa();
+                LimparTela.TelaLimpa();
                 telaPrincipal.Tela();
             } else {
                 System.out.println("Login ou senha incorretos. Tente novamente.");

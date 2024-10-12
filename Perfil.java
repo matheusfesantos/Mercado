@@ -47,7 +47,6 @@ public class Perfil extends Application {
                 "-fx-font-size: 16px; " +
                 "-fx-padding: 10 20;");
 
-        // Ação do botão "VOLTAR"
         voltarlButton.setOnAction(e -> {
             Stage telaprincipalStage = new Stage();
             TelaPrincipal telaPrincipal = new TelaPrincipal(nomeUsuario);
@@ -65,17 +64,15 @@ public class Perfil extends Application {
         rodapeSuperior.getChildren().addAll(voltarlButton);
         root.setTop(rodapeSuperior);
 
-        // Espaço para foto do perfil
         ImageView fotoPerfil = new ImageView(new Image("file:C:/Users/matheus.fgs/Desktop/Tela de Login com Interface/Imagens/Profile.png"));
         fotoPerfil.setFitHeight(150);
         fotoPerfil.setFitWidth(150);
         fotoPerfil.setStyle("-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 5, 0, 2, 2);");
 
-        // Campos de entrada com labels
         TextField nomeField = new TextField(nomeUsuario);
         TextField enderecoField = new TextField(endereco);
         TextField cpfField = new TextField(cpf);
-        TextField telefoneField = new TextField(); // Campo de telefone opcional
+        TextField telefoneField = new TextField()
 
         String textFieldStyle = "-fx-background-color: white; -fx-text-fill: #2F4F4F; " +
                 "-fx-font-size: 14px; -fx-padding: 10; -fx-background-radius: 10; " +
@@ -87,7 +84,6 @@ public class Perfil extends Application {
         telefoneField.setStyle(textFieldStyle);
         telefoneField.setPromptText("Digite seu telefone (opcional)");
 
-        // Labels para os campos
         Label nomeLabel = new Label("Nome:");
         Label enderecoLabel = new Label("Endereço:");
         Label cpfLabel = new Label("CPF:");
@@ -99,14 +95,12 @@ public class Perfil extends Application {
                 "-fx-font-size: 16px; " +
                 "-fx-padding: 10 20;");
 
-        // Ação do botão "SALVAR"
         salvarButton.setOnAction(e -> {
             String nome = nomeField.getText().trim();
             String endereco = enderecoField.getText().trim();
             String cpf = cpfField.getText().trim();
             String telefone = telefoneField.getText().trim();
 
-            // Verificação simples de validação
             if (nome.isEmpty() || endereco.isEmpty() || cpf.isEmpty()) {
                 System.out.println("Por favor, preencha todos os campos obrigatórios.");
             } else {
@@ -118,7 +112,6 @@ public class Perfil extends Application {
             }
         });
 
-        // Layout dos campos com labels
         VBox perfilContainer = new VBox(15, titleLabel, fotoPerfil,
                 nomeLabel, nomeField,
                 enderecoLabel, enderecoField,

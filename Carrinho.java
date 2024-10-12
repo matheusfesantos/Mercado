@@ -31,7 +31,6 @@ public class Carrinho extends Application {
         vbox.setPadding(new Insets(20));
         vbox.setAlignment(Pos.CENTER);
 
-        // Rodapé superior com a mensagem de boas-vindas
         HBox rodapeSuperior = new HBox(10);
         rodapeSuperior.setAlignment(Pos.CENTER_LEFT);
         rodapeSuperior.setPadding(new Insets(10));
@@ -42,12 +41,10 @@ public class Carrinho extends Application {
         rodapeSuperior.getChildren().addAll(tituloLabel);
         root.setTop(rodapeSuperior);
 
-        // Adicionando o título "NOTA FISCAL"
         Label notaFiscalLabel = new Label("NOTA FISCAL");
         notaFiscalLabel.setStyle("-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2F4F4F; -fx-padding: 10;");
         vbox.getChildren().add(notaFiscalLabel);
 
-        // Adicionando os produtos selecionados ao VBox
         VBox produtosVBox = new VBox(10);
         produtosVBox.setPadding(new Insets(10));
         produtosVBox.setAlignment(Pos.TOP_LEFT);
@@ -69,7 +66,6 @@ public class Carrinho extends Application {
             }
         }
 
-        // Adicionando o VBox dos produtos a um ScrollPane
         ScrollPane scrollPane = new ScrollPane(produtosVBox);
         scrollPane.setFitToWidth(true);
         scrollPane.setPadding(new Insets(10));
@@ -77,7 +73,6 @@ public class Carrinho extends Application {
 
         vbox.getChildren().add(scrollPane);
 
-        // Exibindo o total
         Label totalLabel = new Label("Total: R$ " + String.format("%.2f", total));
         totalLabel.setStyle("-fx-font-size: 18px; -fx-font-weight: bold;");
         vbox.getChildren().add(totalLabel);

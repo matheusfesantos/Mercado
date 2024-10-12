@@ -25,7 +25,6 @@ public class Entrega extends Application {
 
         BorderPane root = new BorderPane();
 
-        // VBox para a mensagem
         HBox rodapeSuperior = new HBox();
         rodapeSuperior.setAlignment(Pos.CENTER);
         rodapeSuperior.setPadding(new Insets(10));
@@ -43,7 +42,6 @@ public class Entrega extends Application {
         imagemEntrega.setSmooth(true);
         imagemEntrega.setCache(true);
 
-        // Botão VOLTAR
         Button voltarButton = new Button("VOLTAR");
         voltarButton.setStyle("-fx-background-color: white; -fx-text-fill: #2F4F4F; " +
                 "-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 5, 0, 2, 2); " +
@@ -68,7 +66,6 @@ public class Entrega extends Application {
         rodapeInferior.setStyle("-fx-background-color: #2F4F4F; -fx-padding: 8;");
         rodapeInferior.getChildren().add(voltarButton);
 
-        // Adiciona os componentes no BorderPane
         root.setTop(rodapeSuperior); // Define o rodapé superior
         root.setCenter(imagemEntrega); // Define a imagem no centro
         root.setBottom(rodapeInferior); // Define o rodapé inferior

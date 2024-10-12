@@ -16,15 +16,15 @@ import java.util.List;
 
 public class Produtos extends Application {
     private String nomeUsuario;
-    private List<String> produtosSelecionados; // Lista para armazenar produtos selecionados
-    private List<VBox> produtoBoxes; // Lista para armazenar os produtos
-    private List<Spinner<Integer>> quantidadeSpinners; // Lista para armazenar os Spinners de quantidade
+    private List<String> produtosSelecionados;
+    private List<VBox> produtoBoxes;
+    private List<Spinner<Integer>> quantidadeSpinners;
 
     public Produtos(String nomeUsuario) {
         this.nomeUsuario = nomeUsuario;
-        this.produtosSelecionados = new ArrayList<>(); // Inicializa a lista
-        this.produtoBoxes = new ArrayList<>(); // Inicializa a lista de produtos
-        this.quantidadeSpinners = new ArrayList<>(); // Inicializa a lista de Spinners
+        this.produtosSelecionados = new ArrayList<>();
+        this.produtoBoxes = new ArrayList<>();
+        this.quantidadeSpinners = new ArrayList<>();
     }
 
     @Override
@@ -80,7 +80,6 @@ public class Produtos extends Application {
         gridPane.setVgap(20);
         gridPane.setPadding(new Insets(10));
 
-        // Adicionando produtos com CheckBoxes diferentes
         CheckBox bananaCheckBox = new CheckBox();
         adicionarProduto(gridPane, "Banana", "R$ 2,00", "file:C:/Users/matheus.fgs/Desktop/Tela de Login com Interface/Imagens/Produtos/Bananas.png", bananaCheckBox, 0, 0);
 
@@ -105,7 +104,6 @@ public class Produtos extends Application {
         CheckBox cenouraCheckBox = new CheckBox();
         adicionarProduto(gridPane, "Cenoura", "R$ 4,00", "file:C:/Users/matheus.fgs/Desktop/Tela de Login com Interface/Imagens/Produtos/Cenoura.png", cenouraCheckBox, 3, 1);
 
-// Adicionando mais produtos
         CheckBox tomateCheckBox = new CheckBox();
         adicionarProduto(gridPane, "Tomate", "R$ 3,50", "file:C:/Users/matheus.fgs/Desktop/Tela de Login com Interface/Imagens/Produtos/Tomate.png", tomateCheckBox, 0, 2);
 
@@ -140,7 +138,7 @@ public class Produtos extends Application {
                 "-fx-font-size: 16px; -fx-padding: 10 20;");
 
         finalizarButton.setOnAction(e -> {
-            produtosSelecionados.clear(); // LIMPA A LISTA
+            produtosSelecionados.clear();
 
             if (bananaCheckBox.isSelected()) {
                 int quantidade = quantidadeSpinners.get(0).getValue();
@@ -206,8 +204,6 @@ public class Produtos extends Application {
                 int quantidade = quantidadeSpinners.get(15).getValue();
                 produtosSelecionados.add("Bolo - R$ 12,00 - Quantidade: " + quantidade);
             }
-
-            // Verifica se nenhum produto foi selecionado
             if (produtosSelecionados.isEmpty()) {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Mercado Food Erro");

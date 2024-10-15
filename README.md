@@ -2,7 +2,11 @@
 
 ## Descrição 📜
 
-O projeto **MERCADO FOOD** é um sistema de gerenciamento para um mercado ou supermercado, desenvolvido em Java usando a biblioteca JavaFX e estilizado com CSS. Ele possui funcionalidades como login, compras, escolha de sessões e área de pagamentos. O objetivo do projeto é simular o gerenciamento de um mercado real, aplicando conceitos de programação e desenvolvimento de software que aprendi ao longo dos meus estudos.
+O projeto **MERCADO FOOD** é um sistema de gerenciamento para um mercado ou supermercado, desenvolvido em Java usando a biblioteca JavaFX e estilizado com CSS. Ele possui funcionalidades como login, compras, escolha de sessões e área de pagamentos.
+
+## Objetivo 🎯
+
+O objetivo do projeto é aprender sobre Java e suas bibliotecas, aprofundar-se até onde minha criatividade permitir, e também aprimorar conhecimentos em UI/UX.
 
 ## Funcionalidades 🚀
 
@@ -15,5 +19,7 @@ O projeto **MERCADO FOOD** é um sistema de gerenciamento para um mercado ou sup
 - Funcionalidades de compra com feedback visual para o usuário.
 
 ## Tecnologias Utilizadas 💻
-<img align="center" alt="Matheus-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
-  <img align="center" alt="Matheus-JAVA" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg">
+
+- Java
+- JavaFX
+- CSS
